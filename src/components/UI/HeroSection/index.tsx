@@ -18,8 +18,9 @@ const HeroSection = () => {
     <Wrapper>
       <Inner>
         <Pill>
-          <span>Introducing Raft cards</span>
-          <Image src={ic_chevron_right} alt="chevron-right" />
+          <span>Nouvelle offre Afrolink</span>
+          {/* Image : pictogramme d'accentuation pour le badge du hero - modifier la flèche ici */}
+          <Image src={ic_chevron_right} alt="Icône de flèche décorative" />
         </Pill>
         <HeroTextContainer>
           {isMobile ? (

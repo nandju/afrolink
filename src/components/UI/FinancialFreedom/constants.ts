@@ -1,56 +1,52 @@
 
-import ic_banknotes from '../../../../public/svgs/ic_banknotes.svg';
-import ic_circle_stack from '../../../../public/svgs/ic_circle_stack.svg';
-import ic_arrows_left_right from '../../../../public/svgs/ic_arrows_right_left.svg';
+import ic_strategie from '../../../../public/svgs/ic_banknotes.svg';
+import ic_tableau_de_bord from '../../../../public/svgs/ic_circle_stack.svg';
+import ic_collaboration from '../../../../public/svgs/ic_arrows_right_left.svg';
 
-// For desktop
-export const desktopHeaderPhrase = ['Your Financial Freedom,', 'Your Way'];
+// Desktop
+export const desktopHeaderPhrase = ['Votre stratégie digitale,', 'sans friction'];
 export const desktopParagraphPhrase = [
-  'We believe that managing your finances should be effortless and cost-effective.',
-  "That's why we offer you the freedom you deserve.",
+  'Nous orchestrons vos contenus, vos campagnes et vos expériences pour offrir un parcours fluide sur chaque canal.',
+  "Afrolink s'intègre à vos équipes et accélère votre time-to-market.",
 ];
 export const desktopBriefNotePhrase = [
-  'Smart investments,',
-  'secure payments, and',
-  'expert guidance, all in',
-  'one place.',
+  'Ateliers créatifs, dashbord live,',
+  'le tout dans un même hub.',
 ];
 
-// For mobile
-export const mobileHeaderPhrase = ['Your Financial', 'Freedom, Your Way'];
+
+// Mobile
+export const mobileHeaderPhrase = ['Votre stratégie digitale', 'sans friction'];
 export const mobileParagraphPhrase = [
-  'We believe that managing your finances should be',
-  "effortless and cost-effective. That's why we offer",
-  ' you the freedom you deserve.',
+  "Nous activons vos canaux digitaux avec des contenus cohérents et une exécution rapide pour maximiser l'impact.",
 ];
 
 export const mobileBriefNotePhrase = [
-  'Smart',
-  ' investments,',
-  'secure',
-  ' payments,',
-  'and expert',
-  'guidance, all',
-  'in one place.',
+  'Ateliers',
+  ' collaboratifs,',
+  'reporting',
+  ' instantané',
+  'et actions',
+  ' continues.',
 ];
 
 export const edges = [
   {
-    point: 'No minimum balance fees',
+    point: 'Pilotage stratégique intégré',
     details:
-      'Say goodbye to minimum balance fees. Your account, your balance—no hidden charges',
-    icon: ic_banknotes,
+      'Un directeur de clientèle et un stratège digital pilotent vos objectifs, vos roadmaps et vos indicateurs clés en continu.',
+    icon: ic_strategie,
   },
   {
-    point: 'No monthly fees',
+    point: 'Tableaux de bord temps réel',
     details:
-      'Bank with us without worrying about monthly fees. Keep more of your money where it belongs—in your account',
-    icon: ic_circle_stack,
+      'Suivez vos performances depuis un dashboard unifié : engagement, conversions, sentiment et insights auditables.',
+    icon: ic_tableau_de_bord,
   },
   {
-    point: 'No bank transfer fees',
+    point: 'Collaboration transparente',
     details:
-      'Seamlessly transfer funds without the extra cost. Send and receive money with zero bank transfer fees.',
-    icon: ic_arrows_left_right,
+      'Workflows partagés, sprint reviews hebdomadaires et espaces créatifs communs pour garder vos équipes alignées.',
+    icon: ic_collaboration,
   },
 ];

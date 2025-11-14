@@ -1,60 +1,60 @@
 'use client';
-import Image from 'next/image';
-import ic_import from '../../../../public/svgs/ic_import.svg';
 
-import { Wrapper, Inner, SecondOverlay } from './styles';
 import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
+import ic_import from '../../../../public/svgs/ic_import.svg';
+import { Inner, SecondOverlay, Wrapper } from './styles';
 
-const Preloader = ({
-  setComplete,
-}: {
+type PreloaderProps = {
   setComplete: Dispatch<SetStateAction<boolean>>;
-}) => {
-  const word = ['R', 'a', 'f', 't'];
+};
 
-  const spans = useRef<any>([]); // Create a ref to store the span elements
-  const imageRef = useRef(null);
-  const secondOverlayRef = useRef(null);
-  const wrapperRef = useRef(null);
+const logoLetters = Array.from('Afro');
+
+const Preloader = ({ setComplete }: PreloaderProps) => {
+  const spans = useRef<(HTMLDivElement | null)[]>([]);
+  const imageRef = useRef<HTMLImageElement | null>(null);
+  const secondOverlayRef = useRef<HTMLDivElement | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.to(imageRef.current, {
-      rotate: '360deg',
-      ease: 'back.out(1.7)', // Easing function
-      duration: 1.4,
-    });
-    tl.to(imageRef.current, {
-      y: '-100%', // Move the spans up
-      ease: 'back.out(1.7)', // Easing function
-    });
-    // Iterate through the span elements and animate them
-    tl.to(spans.current, {
-      y: '-100%', // Move the spans up
-      ease: 'back.out(1.7)', // Easing function
-      duration: 1.4, // Animation duration
-      stagger: 0.05, // Stagger duration (0.2 seconds delay between each span)
-    });
-    // Animate both the wrapper and the second overlay almost at the same time
-    tl.to([wrapperRef.current, secondOverlayRef.current], {
-      scaleY: 0,
-      transformOrigin: 'top',
-      ease: 'back.out(1.7)',
-      duration: 1,
-      stagger: 0.2,
-      onComplete: () => {
-        setComplete(true);
-      },
+    const timeline = gsap.timeline({
+      defaults: { ease: 'back.out(1.7)' },
     });
 
-    // Apply a small delay to one of the elements (adjust as needed)
-    tl.to(secondOverlayRef.current, {
+    timeline.to(imageRef.current, {
+      rotate: '360deg',
+      duration: 1.4,
+    });
+
+    timeline.to(imageRef.current, {
+      y: '-100%',
+    });
+
+    timeline.to(spans.current, {
+      y: '-100%',
+      duration: 1.4,
+      stagger: 0.05,
+    });
+
+    timeline.to(
+      [wrapperRef.current, secondOverlayRef.current],
+      {
+        scaleY: 0,
+        transformOrigin: 'top',
+        duration: 1,
+        stagger: 0.2,
+        onComplete: () => setComplete(true),
+      },
+      '-=0.8',
+    );
+
+    timeline.to(secondOverlayRef.current, {
       scaleY: 0,
       transformOrigin: 'top',
-      ease: [0.83, 0, 0.17, 1] as any,
       duration: 1,
-      delay: -0.9, // Adjust this delay as needed to fine-tune the timing
+      ease: [0.83, 0, 0.17, 1] as any,
     });
   }, [setComplete]);
 
@@ -62,20 +62,23 @@ const Preloader = ({
     <>
       <Wrapper ref={wrapperRef}>
         <Inner>
-          <Image ref={imageRef} src={ic_import} alt="import icon" />
+          {/* Image : icône animée du préchargement Afrolink - modifier ici pour un nouveau pictogramme */}
+          <Image ref={imageRef} src={ic_import} alt="Icône de préchargement Afrolink" />
           <div>
-            {word.map((t, i) => (
+            {logoLetters.map((letter, index) => (
               <div
-                key={i}
-                ref={(element) => (spans.current[i] = element)} // Assign ref to each span
+                key={letter + index}
+                ref={(element) => {
+                  spans.current[index] = element;
+                }}
               >
-                {t}
+                {letter}
               </div>
             ))}
           </div>
         </Inner>
       </Wrapper>
-      <SecondOverlay ref={secondOverlayRef}></SecondOverlay>
+      <SecondOverlay ref={secondOverlayRef} />
     </>
   );
 };

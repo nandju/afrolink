@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const styled = { createGlobalStyle };
-
-export const GlobalStyles = styled.createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   :root {
     --Background: #070606;
     --white: #fff;
@@ -19,11 +17,14 @@ export const GlobalStyles = styled.createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  html,
-  body {
+  html {
     max-width: 100vw;
     overflow-x: hidden;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: var(--font-poppins, 'Poppins', sans-serif);
+  }
+
+  body {
+    font-family: var(--font-poppins, 'Poppins', sans-serif);
     background-color: var(--Background);
     color: var(--white);
     scroll-snap-type: y mandatory;

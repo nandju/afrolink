@@ -3,8 +3,8 @@ type FAQItem = {
   answer: string;
 };
 
-export const desktopHeaderPhrase = ['Frequently asked', 'questions'];
-export const mobileHeaderPhrase = ['Frequently', 'asked', 'questions'];
+export const desktopHeaderPhrase = ['Questions fréquentes', 'sur Afrolink'];
+export const mobileHeaderPhrase = ['Questions', 'fréquentes'];
 export const animate = {
   initial: {
     y: '100%',
@@ -19,23 +19,23 @@ export const animate = {
 
 export const faqData: FAQItem[] = [
   {
-    question: 'How do I create an account with RAFT?',
+    question: 'Comment Afrolink construit-il une stratégie digitale ?',
     answer:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      "Nous démarrons par un audit data et des ateliers de co-création. Nous définissons ensuite vos audiences, vos messages clés et un plan d'activation sur-mesure.",
   },
   {
-    question: 'How does RAFT ensure the security of my financial data?',
+    question: 'Quels sont vos délais de production de contenus ?',
     answer:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      "Selon la complexité, nos productions s'étalent de 48h à 4 semaines. Nous travaillons en sprints hebdomadaires avec validations intermédiaires.",
   },
   {
-    question: 'What types of transactions can I perform with RAFT?',
+    question: 'Proposez-vous un accompagnement média ?',
     answer:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      "Oui, nous gérons la stratégie média, l'achat, le suivi et les optimisations multi-plateformes avec un reporting clair et actionnable.",
   },
   {
-    question: 'What benefits does RAFT offer for wealth management?',
+    question: 'Comment se déroule la collaboration au quotidien ?',
     answer:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      'Vous accédez à un hub projet partagé : points de synchro, outils de feedback, dashboards temps réel et un interlocuteur unique côté Afrolink.',
   },
 ];

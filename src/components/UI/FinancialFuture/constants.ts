@@ -1,57 +1,55 @@
-import ic_money_send from '../../../../public/svgs/ic_money_send.svg';
-import ic_wallet_minus from '../../../../public/svgs/ic_wallet_minus.svg';
+import ic_campaigns from '../../../../public/svgs/ic_money_send.svg';
+import ic_insights from '../../../../public/svgs/ic_wallet_minus.svg';
+
 export const cardsInfo = [
   {
-    title: 'Spend Better',
+    title: 'Expériences immersives',
     details:
-      'Set and achieve financial goals with ease, automate your savings, and watch your money grow without the stress.',
-    icon: ic_money_send,
+      "Concevez des plateformes, landing pages et activations digitales pensées pour capter l'attention et convertir en moins de trois clics.",
+    icon: ic_campaigns,
   },
   {
-    title: 'Invest Better',
+    title: 'Insights actionnables',
     details:
-      'Set and achieve financial goals with ease, automate your savings, and watch your money grow without the stress.',
-    icon: ic_wallet_minus,
+      'Transformez vos données en décisions créatives grâce à nos dashboards personnalisés et à nos analyses hebdomadaires.',
+    icon: ic_insights,
   },
 ];
 
 export const stats = [
   {
-    number: '50+',
-    subtitle: 'cities',
+    number: '120+',
+    subtitle: 'campagnes lancées',
   },
   {
-    number: '50,000+',
-    subtitle: 'transactions',
+    number: '35M+',
+    subtitle: 'interactions générées',
   },
   {
-    number: '3M+',
-    subtitle: 'users',
+    number: '18',
+    subtitle: 'pays activés',
   },
   {
-    number: '5+',
-    subtitle: 'user ratings',
+    number: '98%',
+    subtitle: 'taux de satisfaction client',
   },
 ];
 
-// For desktop
+// Desktop
 export const desktopHeaderPhrase = [
-  'Confidently Shape Your',
-  'Financial Future',
+  'Façonnez votre futur digital',
+  'avec Afrolink',
 ];
 export const desktopParagraphPhrase = [
-  'At RAFT, we empower you to confidently shape your financial future. Our modern',
-  'approach simplifies saving and investing, making it easier than ever.',
+  'Notre collectif de créatifs, stratéges et data analysts imagine des dispositifs sur-mesure pour faire grandir votre marque.',
+  'Nous délivrons rapidement, mesurons précisément et optimisons en continu.',
 ];
 
-// For mobile
+// Mobile
 export const mobileHeaderPhrase = [
-  'Confidently Shape',
-  ' Your Financial Future',
+  'Façonnez votre',
+  'futur digital',
 ];
 export const mobileParagraphPhrase = [
-  'At RAFT, we empower you to confidently shape',
-  'your financial future. Our modern approach',
-  'simplifies saving and investing, making it easier',
-  'than ever.',
+  'Afrolink associe stratégie, design et data pour propulser vos expériences digitales et vos conversions.',
 ];

@@ -35,20 +35,27 @@ const Featured = () => {
             viewport={{ amount: 0.25, once: true }}
           >
             {isMobile ? (
+              <>
+                {/* Image : visuel mobile des réalisations Afrolink - remplacer pour mettre en avant une autre campagne */}
               <Image
                 src={featured_mobile_banner}
-                alt="featured_mobile_banner"
+                  alt="Créations Afrolink en version mobile"
                 fill
               />
+              </>
             ) : (
-              <Image src={big_banner} alt="big_banner" fill />
+              <>
+                {/* Image : bannière desktop des réalisations Afrolink - modifier le fichier PNG pour mettre à jour le portfolio */}
+                <Image src={big_banner} alt="Créations Afrolink en version desktop" fill />
+              </>
             )}
           </Div>
         </ImageContainer>
-        <h2>Featured and Seen in</h2>
+        <h2>Ils propulsent leurs marques avec Afrolink</h2>
         <ParallaxImages>
           <ParallaxText baseVelocity={-4}>
-            <Image src={companies_image} alt="comapanies" />
+            {/* Image : logos des partenaires Afrolink - remplacer l'image pour afficher de nouveaux clients */}
+            <Image src={companies_image} alt="Logos de partenaires Afrolink" />
           </ParallaxText>
         </ParallaxImages>
       </Inner>

@@ -55,7 +55,8 @@ const FAQ = () => {
             >
               <Question onClick={() => toggleItem(index)}>
                 {item.question}
-                <Image src={ic_chevron_down} alt="cheveron down" />
+                {/* Image : icône d'ouverture/fermeture de la FAQ - remplacez le SVG pour changer le style */}
+                <Image src={ic_chevron_down} alt="Flèche de la question fréquente" />
               </Question>
               <AnimatePresence>
                 {openItem === index && (

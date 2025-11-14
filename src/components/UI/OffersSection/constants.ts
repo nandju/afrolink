@@ -1,47 +1,46 @@
-import seamless_payments from '../../../../public/images/seamless_payments.png';
-import smart_investing from '../../../../public/images/smart_investing.png';
-import wealth_management from '../../../../public/images/wealth_management.png';
-import financial_planning from '../../../../public/images/financial_planning.png';
-// For desktop
+import campagnes_sociales from '../../../../public/images/seamless_payments.png';
+import production_video from '../../../../public/images/smart_investing.png';
+import strategie_marque from '../../../../public/images/wealth_management.png';
+import activation_media from '../../../../public/images/financial_planning.png';
+
+// Desktop
 export const desktopHeaderPhrases = [
-  'Elevate Your Financial',
-  'Journey with RAFT',
+  'Des offres sur mesure',
+  'pour accélérer votre visibilité digitale',
 ];
 export const desktopParagraphPhrase = [
-  'RAFT offers a world of financial possibilities. From investments to payments,',
-  "we've got you covered. Join us and unlock your potential today.",
+  "De la stratégie de contenu aux campagnes média, Afrolink orchestre l'ensemble du dispositif pour faire rayonner votre marque en ligne.",
+  'Nous combinons créativité, data et technologies pour obtenir des résultats mesurables.',
 ];
 
-// For mobile
+// Mobile
 export const mobileParagraphPhrase = [
-  'RAFT offers a world of financial possibilities. From',
-  "investments to payments, we've got you covered.",
-  'Join us and unlock your potential today.',
+  'Afrolink vous accompagne sur toute la chaîne digitale : stratégie, contenus, social ads et reporting premium.',
 ];
 
 export const offers = [
   {
-    illustration: seamless_payments,
-    title: 'Seamless Payments',
+    illustration: campagnes_sociales,
+    title: 'Stratégie social media',
     details:
-      'Enjoy secure, seamless transactions that make managing your money a breeze.',
+      'Construisez un calendrier éditorial percutant, optimisez vos communautés et pilotez vos KPI sociaux en temps réel.',
   },
   {
-    illustration: smart_investing,
-    title: 'Smart Investing',
+    illustration: production_video,
+    title: 'Production vidéo & motion',
     details:
-      'Grow your wealth confidently with our personalized investment solutions, tailored to your financial goals.',
+      "Du script à la post-production, nous créons des formats immersifs adaptés à chaque plateforme pour maximiser l'engagement.",
   },
   {
-    illustration: wealth_management,
-    title: 'Wealth Management',
+    illustration: strategie_marque,
+    title: 'Identité de marque digitale',
     details:
-      'Make informed decisions for your financial future with our wealth management expertise.',
+      'Définissez une image cohérente sur tous vos points de contact grâce à des guidelines graphiques et tonales puissantes.',
   },
   {
-    illustration: financial_planning,
-    title: 'Financial Planning',
+    illustration: activation_media,
+    title: 'Activation média multicanale',
     details:
-      'Achieve your financial dreams with our comprehensive financial planning services, guiding you toward a secure future.',
+      'Lancez des campagnes performantes sur les canaux payants avec un suivi analytique et des optimisations continues.',
   },
 ];

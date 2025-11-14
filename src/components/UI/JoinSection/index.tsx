@@ -55,10 +55,11 @@ const JoinSection = () => {
               <UserInfo>
                 <Name>
                   <MaskText phrases={new Array(t.person)} tag="h3" />
-                  <MaskText phrases={new Array('Happy RAFT User')} tag="p" />
+                  <MaskText phrases={new Array('Client partenaire Afrolink')} tag="p" />
                 </Name>
                 <Avatar>
-                  <Image src={t.avatar} alt="user avatar" />
+                  {/* Image : avatar du témoignage - remplacez le portrait pour personnaliser le retour d'expérience */}
+                  <Image src={t.avatar} alt={`Portrait de ${t.person}`} />
                 </Avatar>
               </UserInfo>
             </Testimonial>
@@ -66,10 +67,12 @@ const JoinSection = () => {
         </TestimonialWrapper>
         <PaginationButtonContainer>
           <Previous onClick={previous}>
-            <Image src={ic_arrow_left} alt="arrow_left" />
+            {/* Image : flèche précédente des témoignages - mettez à jour le SVG pour changer le style */}
+            <Image src={ic_arrow_left} alt="Flèche vers la gauche" />
           </Previous>
           <Next onClick={next}>
-            <Image src={ic_arrow_right} alt="arrow_right" />
+            {/* Image : flèche suivante des témoignages - mettez à jour le SVG pour changer le style */}
+            <Image src={ic_arrow_right} alt="Flèche vers la droite" />
           </Next>
         </PaginationButtonContainer>
       </Inner>

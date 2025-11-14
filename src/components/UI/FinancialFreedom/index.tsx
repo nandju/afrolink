@@ -55,9 +55,15 @@ const FinancialFreedom = () => {
             viewport={{ amount: 0.25, once: true }}
           >
             {isMobile ? (
-              <Image src={freedom_mobile_banner} alt="banner_img" fill />
+              <>
+                {/* Image : bannière mobile des services stratégiques Afrolink - actualisez ce visuel pour refléter de nouvelles campagnes */}
+                <Image src={freedom_mobile_banner} alt="Équipe Afrolink en action sur mobile" fill />
+              </>
             ) : (
-              <Image src={financial_freedom_banner} alt="banner_img" fill />
+              <>
+                {/* Image : bannière desktop des services stratégiques Afrolink - mettez à jour pour présenter une nouvelle scénographie */}
+                <Image src={financial_freedom_banner} alt="Équipe Afrolink en action sur desktop" fill />
+              </>
             )}
           </Div>
         </BannerCtn>
@@ -65,7 +71,8 @@ const FinancialFreedom = () => {
           {edges.map((edge, i) => (
             <Edge key={i}>
               <Title>
-                <Image src={edge.icon} alt="icon" />
+                {/* Image : pictogramme pour "{edge.point}" - remplacez le SVG pour ajuster l'iconographie */}
+                <Image src={edge.icon} alt={`Icône ${edge.point}`} />
                 <MaskText phrases={new Array(edge.point)} tag="h3" />
               </Title>
               <MaskText phrases={new Array(edge.details)} tag="p" />

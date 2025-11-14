@@ -52,7 +52,8 @@ const FinancialFuture = () => {
                 <MaskText phrases={new Array(info.details)} tag="p" />
               </TextCtn>
               <SVGCtn>
-                <Image src={info.icon} alt="icon" />
+                {/* Image : icône pour "{info.title}" - changez le SVG pour personnaliser la représentation visuelle */}
+                <Image src={info.icon} alt={`Icône ${info.title}`} />
               </SVGCtn>
             </Card>
           ))}
@@ -68,9 +69,15 @@ const FinancialFuture = () => {
       </Inner>
       <Banner>
         {isMobile ? (
-          <Image src={future_mobile_banner} alt="future_banner" fill />
+          <>
+            {/* Image : visuel mobile d'une réalisation Afrolink - remplacez le PNG pour mettre à jour le showcase */}
+            <Image src={future_mobile_banner} alt="Réalisations Afrolink sur mobile" fill />
+          </>
         ) : (
-          <Image src={future_banner} alt="future_banner" fill />
+          <>
+            {/* Image : visuel desktop d'une réalisation Afrolink - remplacez le PNG pour mettre à jour le showcase */}
+            <Image src={future_banner} alt="Réalisations Afrolink sur desktop" fill />
+          </>
         )}
       </Banner>
     </Wrapper>

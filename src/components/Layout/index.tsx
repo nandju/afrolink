@@ -1,12 +1,16 @@
 'use client';
 
 import { ReactLenis } from '@studio-freight/react-lenis';
+import { useState, type ReactNode } from 'react';
 import StyledComponentsRegistry from '../../../libs/registry';
-import { GlobalStyles } from './GlobalStyles';
 import { Footer, Header, Preloader } from '..';
-import { useState } from 'react';
+import { GlobalStyles } from './GlobalStyles';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+type LayoutProps = {
+  children: ReactNode;
+};
+
+const Layout = ({ children }: LayoutProps) => {
   const [complete, setComplete] = useState(false);
   return (
     <StyledComponentsRegistry>

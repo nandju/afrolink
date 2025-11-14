@@ -85,6 +85,7 @@ export const LeftImage = styled(Image)`
   position: absolute;
   top: 64px;
   transition: transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-radius: 0.75rem;
 
   &.active {
     transform: rotate(70.281deg) translate(-50%, 60%);
@@ -96,6 +97,7 @@ export const MiddleImage = styled(Image)`
   position: relative;
   z-index: 3;
   cursor: pointer;
+  border-radius: 0.75rem;
 `;
 
 export const RightImage = styled(Image)`
@@ -105,7 +107,7 @@ export const RightImage = styled(Image)`
   top: 65px;
   position: absolute;
   transition: transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-
+  border-radius: 0.75rem;
   &.active {
     transform: rotate(-70.281deg) translate(50%, 60%);
     top: 60%;
