@@ -21,7 +21,6 @@ const Layout = ({ children }: LayoutProps) => {
         <GlobalStyles />
         <Preloader setComplete={setComplete} />
         <div className={complete ? 'complete' : 'not_complete'}>
-          <Header />
           {children}
           <Footer />
         </div>

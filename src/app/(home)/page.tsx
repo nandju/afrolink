@@ -7,18 +7,20 @@ import {
   IntroSection,
   JoinSection,
   OffersSection,
+  BeforeHeroSection,
 } from '@/components';
 
 export default function Home() {
   return (
     <main>
+      <BeforeHeroSection />
       <HeroSection />
-      <Featured />
+      <Featured /> 
       <OffersSection />
       <FinancilaFreedom />
-      <FinancialFuture />
+      {/* <FinancialFuture /> */}
       <IntroSection />
-      <JoinSection />
+      {/* <JoinSection /> */}
       <FAQ />
     </main>
   );

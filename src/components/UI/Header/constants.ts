@@ -26,11 +26,11 @@ export const links = [
     linkTo: 'Services',
   },
   {
-    url: '#realisations',
-    linkTo: 'Études de cas',
+    url: '#work',
+    linkTo: 'Notre travail',
   },
   {
-    url: '#agence',
-    linkTo: "L'agence",
+    url: '#news',
+    linkTo: "Actualités",
   },
 ];
