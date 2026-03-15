@@ -12,31 +12,40 @@ import {
   DarkModeToggle,
 } from './styles';
 
-const BeforeHeroSection: React.FC = () => {
+type BeforeHeroSectionProps = {
+  backgroundImage?: string;
+  title?: string;
+  taglineSpan?: string;
+  taglineStrong?: string;
+};
 
-
+const BeforeHeroSection: React.FC<BeforeHeroSectionProps> = ({
+  backgroundImage = '/images/before-hero.jpg',
+  title = "NOUS SOMMES L'AGENCE\nCRÉATIVE GLOBALE POUR\nLES MARQUES\n[HORS-NORMES]",
+  taglineSpan = "CREATIVE AGENCY",
+  taglineStrong = "FOR OUTSIDER BRANDS",
+}) => {
   return (
     <Section>
       <Header />
-      <BackgroundImage />
+      <BackgroundImage style={{ backgroundImage: `url('${backgroundImage}')` }} />
       <Overlay />
-
 
       {/* Tagline top-right */}
       <TaglineBlock>
-        <span>CREATIVE AGENCY</span>
-        <strong>FOR OUTSIDER BRANDS</strong>
+        <span>{taglineSpan}</span>
+        <strong>{taglineStrong}</strong>
       </TaglineBlock>
-
-
 
       {/* Hero title bottom-left */}
       <BottomLeft>
         <HeroTitle>
-          NOUS SOMMES L&apos;AGENCE<br />
-          CRÉATIVE GLOBALE POUR<br />
-          LES MARQUES<br />
-          [HORS-NORMES]
+          {title.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < title.split('\n').length - 1 && <br />}
+            </React.Fragment>
+          ))}
         </HeroTitle>
       </BottomLeft>
 

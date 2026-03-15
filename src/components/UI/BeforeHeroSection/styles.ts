@@ -20,7 +20,7 @@ export const Section = styled.section`
 export const BackgroundImage = styled.div`
   position: absolute;
   inset: 0;
-  background: url('/images/before-hero.jpg') center / cover no-repeat;
+  background: center / cover no-repeat;
   z-index: 1;
 `;
 
