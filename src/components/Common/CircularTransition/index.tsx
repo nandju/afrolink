@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { TransitionOverlay, Circle, PageName } from './styles';
@@ -12,6 +12,19 @@ const CircularTransition: React.FC<CircularTransitionProps> = ({ children }) => 
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [targetPage, setTargetPage] = useState('');
   const router = useRouter();
+
+  const startTransition = useCallback((href: string) => {
+    const pageName = href.replace('/', '').charAt(0).toUpperCase() + href.slice(2) || 'Accueil';
+    setTargetPage(pageName);
+    setIsTransitioning(true);
+
+    setTimeout(() => {
+      router.push(href);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500);
+    }, 1500);
+  }, [router]);
 
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -29,20 +42,7 @@ const CircularTransition: React.FC<CircularTransitionProps> = ({ children }) => 
 
     document.addEventListener('click', handleLinkClick);
     return () => document.removeEventListener('click', handleLinkClick);
-  }, []);
-
-  const startTransition = (href: string) => {
-    const pageName = href.replace('/', '').charAt(0).toUpperCase() + href.slice(2) || 'Accueil';
-    setTargetPage(pageName);
-    setIsTransitioning(true);
-
-    setTimeout(() => {
-      router.push(href);
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 500);
-    }, 1500);
-  };
+  }, [startTransition]);
 
   return (
     <>
