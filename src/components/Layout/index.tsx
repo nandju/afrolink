@@ -3,7 +3,7 @@
 import { ReactLenis } from '@studio-freight/react-lenis';
 import { useState, type ReactNode } from 'react';
 import StyledComponentsRegistry from '../../../libs/registry';
-import { Footer, Header, Preloader } from '..';
+import { Footer, Header, Preloader, CircularTransition } from '..';
 import { GlobalStyles } from './GlobalStyles';
 
 type LayoutProps = {
@@ -21,7 +21,10 @@ const Layout = ({ children }: LayoutProps) => {
         <GlobalStyles />
         <Preloader setComplete={setComplete} />
         <div className={complete ? 'complete' : 'not_complete'}>
-          {children}
+          <Header />
+          <CircularTransition>
+            {children}
+          </CircularTransition>
           <Footer />
         </div>
       </ReactLenis>

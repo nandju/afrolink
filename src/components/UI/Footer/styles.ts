@@ -34,7 +34,7 @@ export const FooterMainContent = styled.div`
   display: flex;
   flex-direction: column;
   padding: 3.75rem 0 3.25rem;
-  border-top: 0.0625rem solid #3d3d3d;
+  border-top: 0.0625rem solid rgba(226, 124, 0, 0.3);
   gap: 3.25rem;
 `;
 
@@ -56,7 +56,8 @@ export const QRContainer = styled.div`
   padding: 1.25rem 1rem;
   gap: 0.75rem;
   border-radius: 0.5rem;
-  border: 1px dashed var(--White, #fff);
+  border: 1px dashed rgba(226, 124, 0, 0.5);
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.05), rgba(255, 165, 0, 0.05));
 `;
 
 export const QRImageCtn = styled.div``;
@@ -115,7 +116,7 @@ export const LinksContainer = styled.ul`
   gap: 0.75rem;
 
   li {
-    color: #efefef;
+    color: var(--light-gray);
     font-size: 1rem;
     font-weight: 400;
     cursor: pointer;
@@ -126,7 +127,7 @@ export const LinksContainer = styled.ul`
       content: '';
       width: 100%;
       height: 1px;
-      background-color: #efefef;
+      background-color: var(--gradient-start);
       left: 0;
       bottom: -5px;
       transform: scaleX(0);
@@ -135,6 +136,7 @@ export const LinksContainer = styled.ul`
     }
 
     &:hover {
+      color: var(--white);
       &::after {
         width: 100%;
         transform: scaleX(1);
@@ -158,6 +160,7 @@ export const Translator = styled.div`
   h3 {
     font-size: 1.5rem;
     font-weight: 400;
+    color: var(--white);
   }
 
   @media (max-width: 768px) {
@@ -174,6 +177,7 @@ export const CopyRight = styled.div`
   font-weight: 400;
   display: flex;
   align-items: center;
+  color: var(--light-gray);
 
   @media (max-width: 768px) {
     font-size: 0.875rem;

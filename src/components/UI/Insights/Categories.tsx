@@ -34,12 +34,12 @@ const CategoryTitle = styled.h3`
   font-size: 1.2rem;
 `;
 
-const categories = ['Branding', 'Marketing', 'Social Media', 'Strategy'];
+const categories = ['Image de Marque', 'Marketing', 'Réseaux Sociaux', 'Stratégie'];
 
 const Categories: React.FC = () => {
   return (
     <Section>
-      <Title>Categories</Title>
+      <Title>Catégories</Title>
       <CategoriesGrid>
         {categories.map((category, index) => (
           <CategoryItem

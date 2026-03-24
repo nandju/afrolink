@@ -35,12 +35,12 @@ const Logo = styled(motion.div)`
   color: #666;
 `;
 
-const brands = ['Brand 1', 'Brand 2', 'Brand 3', 'Brand 4', 'Brand 5', 'Brand 6'];
+const brands = ['Marque 1', 'Marque 2', 'Marque 3', 'Marque 4', 'Marque 5', 'Marque 6'];
 
 const BrandsWorkedWith: React.FC = () => {
   return (
     <Section>
-      <Title>Brands We Worked With</Title>
+      <Title>Marques Avec Lesquelles Nous Avons Travaillé</Title>
       <LogosGrid>
         {brands.map((brand, index) => (
           <Logo

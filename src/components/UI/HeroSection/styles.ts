@@ -26,12 +26,12 @@ export const Pill = styled.div`
   gap: 0.625rem;
   border-radius: 6.25rem;
   border: 0.2px solid #989898;
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.15), rgba(255, 165, 0, 0.15));
   backdrop-filter: blur(10px);
   margin-bottom: 1rem;
 
   span {
-    color: var(--light-gray);
+    color: var(--white);
     font-size: 1rem;
     font-weight: 400;
   }

@@ -9,9 +9,9 @@ export default function ScheduleCall() {
     <main>
       <BeforeHeroSection
         backgroundImage="/images/schedule-hero.jpg"
-        title="SCHEDULE A CALL"
-        taglineSpan="CONTACT US"
-        taglineStrong="LET'S TALK"
+        title="PLANIFIER UN APPEL"
+        taglineSpan="CONTACTEZ-NOUS"
+        taglineStrong="PARLONS-EN"
       />
       <ContactForm />
       <MeetingScheduler />

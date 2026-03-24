@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <Section>
-      <Title>Contact Form</Title>
+      <Title>Formulaire de Contact</Title>
       <Form
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
         <Input
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="Nom"
           value={formData.name}
           onChange={handleChange}
           required
@@ -101,14 +101,14 @@ const ContactForm: React.FC = () => {
         <Input
           type="text"
           name="company"
-          placeholder="Company"
+          placeholder="Entreprise"
           value={formData.company}
           onChange={handleChange}
         />
         <Input
           type="text"
           name="projectType"
-          placeholder="Project Type"
+          placeholder="Type de Projet"
           value={formData.projectType}
           onChange={handleChange}
         />
@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           required
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Envoyer</Button>
       </Form>
     </Section>
   );

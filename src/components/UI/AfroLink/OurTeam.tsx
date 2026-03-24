@@ -3,11 +3,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #000;
-  color: #fff;
+  background: var(--Background);
+  color: var(--white);
   text-align: center;
 `;
 
@@ -26,14 +27,21 @@ const TeamGrid = styled.div`
 
 const TeamMember = styled(motion.div)`
   padding: 2rem;
-  background: #111;
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.1), rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(226, 124, 0, 0.2);
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(226, 124, 0, 0.2);
+  }
 `;
 
 const MemberPhoto = styled.div`
   width: 100px;
   height: 100px;
-  background: #333;
+  background: var(--accent-gradient);
   border-radius: 50%;
   margin: 0 auto 1rem;
 `;
@@ -41,24 +49,27 @@ const MemberPhoto = styled.div`
 const MemberName = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--white);
 `;
 
 const MemberRole = styled.p`
   font-size: 1rem;
-  color: #ccc;
+  color: var(--light-gray);
 `;
 
 const team = [
-  { name: 'John Doe', role: 'Creative Director' },
-  { name: 'Jane Smith', role: 'Digital Strategist' },
-  { name: 'Bob Johnson', role: 'Content Creator' },
-  { name: 'Alice Brown', role: 'Project Manager' },
+  { name: 'John Doe', role: 'Directeur Créatif' },
+  { name: 'Jane Smith', role: 'Stratège Digital' },
+  { name: 'Bob Johnson', role: 'Créateur de Contenu' },
+  { name: 'Alice Brown', role: 'Chef de Projet' },
 ];
 
 const OurTeam: React.FC = () => {
+  const titlePhrases = ['Notre Équipe'];
+
   return (
     <Section>
-      <Title>Our Team</Title>
+      <MaskText phrases={titlePhrases} tag="h2" />
       <TeamGrid>
         {team.map((member, index) => (
           <TeamMember

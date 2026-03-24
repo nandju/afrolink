@@ -9,9 +9,9 @@ export default function Insights() {
     <main>
       <BeforeHeroSection
         backgroundImage="/images/insights-hero.jpg"
-        title="INSIGHTS & IDEAS"
-        taglineSpan="OUR BLOG"
-        taglineStrong="DIGITAL TRENDS"
+        title="INSIGHTS ET IDÉES"
+        taglineSpan="NOTRE BLOG"
+        taglineStrong="TENDANCES DIGITALES"
       />
       <LatestArticles />
       <Categories />

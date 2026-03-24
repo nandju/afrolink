@@ -4,16 +4,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--Background);
   text-align: center;
 `;
 
 const Title = styled.h2`
   font-size: 2.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 2rem;
 `;
 
@@ -26,15 +27,22 @@ const ProjectsGrid = styled.div`
 `;
 
 const ProjectItem = styled(motion.div)`
-  background: #f5f5f5;
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.1), rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(226, 124, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(226, 124, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(226, 124, 0, 0.2);
+  }
 `;
 
 const ProjectImage = styled.div`
   height: 200px;
-  background: #ccc; /* Placeholder */
+  background: var(--accent-gradient); /* Placeholder */
 `;
 
 const ProjectContent = styled.div`
@@ -43,43 +51,45 @@ const ProjectContent = styled.div`
 
 const ProjectTitle = styled.h3`
   font-size: 1.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 0.5rem;
 `;
 
 const ProjectDescription = styled.p`
   font-size: 1rem;
-  color: #666;
+  color: var(--light-gray);
   line-height: 1.6;
 `;
 
 const projects = [
   {
-    title: 'Brand Campaign',
-    description: 'Comprehensive brand campaign development.',
+    title: 'Campagne de Marque',
+    description: 'Développement complet de campagne de marque.',
     image: '/images/project1.jpg',
   },
   {
-    title: 'Social Media Strategy',
-    description: 'Engaging social media strategies.',
+    title: 'Stratégie de Réseaux Sociaux',
+    description: 'Stratégies engageantes de réseaux sociaux.',
     image: '/images/project2.jpg',
   },
   {
-    title: 'Website Design',
-    description: 'Modern and responsive website designs.',
+    title: 'Conception de Site Web',
+    description: 'Conceptions de sites web modernes et responsives.',
     image: '/images/project3.jpg',
   },
   {
-    title: 'Product Launch',
-    description: 'Successful product launch campaigns.',
+    title: 'Lancement de Produit',
+    description: 'Campagnes de lancement de produit réussies.',
     image: '/images/project4.jpg',
   },
 ];
 
 const FeaturedProjects: React.FC = () => {
+  const titlePhrases = ['Projets Présentés'];
+
   return (
     <Section>
-      <Title>Featured Projects</Title>
+      <MaskText phrases={titlePhrases} tag="h2" />
       <ProjectsGrid>
         {projects.map((project, index) => (
           <ProjectItem

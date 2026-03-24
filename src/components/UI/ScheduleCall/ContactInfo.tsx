@@ -42,15 +42,15 @@ const InfoDetail = styled.p`
 `;
 
 const contactInfo = [
-  { title: 'Location', detail: 'Abidjan, Côte d\'Ivoire' },
+  { title: 'Localisation', detail: 'Abidjan, Côte d\'Ivoire' },
   { title: 'Email', detail: 'contact@afrolink.com' },
-  { title: 'Phone', detail: '+225 XX XX XX XX' },
+  { title: 'Téléphone', detail: '+225 XX XX XX XX' },
 ];
 
 const ContactInfo: React.FC = () => {
   return (
     <Section>
-      <Title>Contact Info</Title>
+      <Title>Informations de Contact</Title>
       <InfoGrid>
         {contactInfo.map((info, index) => (
           <InfoItem

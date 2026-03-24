@@ -24,7 +24,7 @@ const CTASection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Title>Stay inspired by digital creativity.</Title>
+        <Title>Restez inspiré par la créativité digitale.</Title>
       </motion.div>
     </Section>
   );

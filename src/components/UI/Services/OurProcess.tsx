@@ -3,11 +3,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #000;
-  color: #fff;
+  background: var(--Background);
+  color: var(--white);
   text-align: center;
 `;
 
@@ -26,41 +27,54 @@ const ProcessGrid = styled.div`
 
 const ProcessItem = styled(motion.div)`
   padding: 2rem;
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.1), rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(226, 124, 0, 0.2);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(226, 124, 0, 0.2);
+  }
 `;
 
 const ProcessTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--white);
 `;
 
 const ProcessDescription = styled.p`
   font-size: 1rem;
   line-height: 1.6;
+  color: var(--light-gray);
 `;
 
 const processes = [
   {
-    title: 'Discover',
-    description: 'Understanding your brand and goals.',
+    title: 'Découvrir',
+    description: 'Comprendre votre marque et vos objectifs.',
   },
   {
-    title: 'Strategize',
-    description: 'Creating a strong communication plan.',
+    title: 'Stratégiser',
+    description: 'Créer un plan de communication solide.',
   },
   {
-    title: 'Create',
-    description: 'Designing content and campaigns.',
+    title: 'Créer',
+    description: 'Concevoir du contenu et des campagnes.',
   },
   {
-    title: 'Launch & Optimize',
-    description: 'Publishing and improving performance.',
+    title: 'Lancer et Optimiser',
+    description: 'Publier et améliorer les performances.',
   },
 ];
 
 const OurProcess: React.FC = () => {
+  const titlePhrases = ['Notre Processus'];
+
   return (
     <Section>
-      <Title>Our Process</Title>
+      <MaskText phrases={titlePhrases} tag="h2" />
       <ProcessGrid>
         {processes.map((process, index) => (
           <ProcessItem

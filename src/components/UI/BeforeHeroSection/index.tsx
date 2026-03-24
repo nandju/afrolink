@@ -22,8 +22,8 @@ type BeforeHeroSectionProps = {
 const BeforeHeroSection: React.FC<BeforeHeroSectionProps> = ({
   backgroundImage = '/images/before-hero.jpg',
   title = "NOUS SOMMES L'AGENCE\nCRÉATIVE GLOBALE POUR\nLES MARQUES\n[HORS-NORMES]",
-  taglineSpan = "CREATIVE AGENCY",
-  taglineStrong = "FOR OUTSIDER BRANDS",
+  taglineSpan = "AGENCE CRÉATIVE",
+  taglineStrong = "POUR LES MARQUES HORS-NORMES",
 }) => {
   return (
     <Section>
@@ -51,7 +51,7 @@ const BeforeHeroSection: React.FC<BeforeHeroSectionProps> = ({
 
       {/* Dark mode toggle bottom-right */}
       <DarkModeToggle>
-        <span className="dot" /> DARK MODE
+        <span className="dot" /> MODE SOMBRE
       </DarkModeToggle>
     </Section>
   );

@@ -29,7 +29,7 @@ const CTASection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Title>Want to collaborate with AfroLink?</Title>
+        <Title>Envie de collaborer avec AfroLink ?</Title>
         <ButtonContainer>
           <GetStartedButton padding="1rem 2rem" />
         </ButtonContainer>

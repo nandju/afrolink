@@ -31,9 +31,9 @@ const MeetingScheduler: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Title>Meeting Scheduler</Title>
+        <Title>Planificateur de Rendez-vous</Title>
         <Description>
-          Choose a time that works for you and let&apos;s talk about your ideas.
+          Choisissez un horaire qui vous convient et parlons de vos idées.
         </Description>
         {/* Intégration Calendly ou autre ici */}
       </motion.div>

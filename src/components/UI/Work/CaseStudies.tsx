@@ -37,15 +37,15 @@ const Description = styled.p`
 const CaseStudies: React.FC = () => {
   return (
     <Section>
-      <Title>Case Studies</Title>
+      <Title>Études de Cas</Title>
       <CaseStudy
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <ProjectTitle>Digital Campaign for a Fashion Brand</ProjectTitle>
+        <ProjectTitle>Campagne Digitale pour une Marque de Mode</ProjectTitle>
         <Description>
-          We developed a full digital communication strategy including content creation, campaign visuals and social media activation.
+          Nous avons développé une stratégie de communication digitale complète incluant la création de contenu, les visuels de campagne et l&apos;activation des réseaux sociaux.
         </Description>
       </CaseStudy>
     </Section>

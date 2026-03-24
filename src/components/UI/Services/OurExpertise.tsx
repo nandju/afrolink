@@ -3,16 +3,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--Background);
   text-align: center;
 `;
 
 const Title = styled.h2`
   font-size: 2.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 2rem;
 `;
 
@@ -25,31 +26,40 @@ const ServicesGrid = styled.div`
 `;
 
 const ServiceItem = styled(motion.div)`
-  background: #f5f5f5;
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.1), rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(226, 124, 0, 0.2);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(226, 124, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(226, 124, 0, 0.2);
+  }
 `;
 
 const ServiceTitle = styled.h3`
   font-size: 1.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 1rem;
 `;
 
 const services = [
-  'Brand Strategy',
-  'Social Media Management',
-  'Content Creation',
-  'Digital Campaigns',
-  'Website Design',
-  'Creative Direction',
+  'Stratégie de Marque',
+  'Gestion des Réseaux Sociaux',
+  'Création de Contenu',
+  'Campagnes Digitales',
+  'Conception de Sites Web',
+  'Direction Créative',
 ];
 
 const OurExpertise: React.FC = () => {
+  const titlePhrases = ['Notre Expertise'];
+
   return (
     <Section>
-      <Title>Our Expertise</Title>
+      <MaskText phrases={titlePhrases} tag="h2" />
       <ServicesGrid>
         {services.map((service, index) => (
           <ServiceItem

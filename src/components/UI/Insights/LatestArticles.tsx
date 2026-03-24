@@ -38,16 +38,16 @@ const ArticleTitle = styled.h3`
 `;
 
 const articles = [
-  'Digital marketing trends in Africa',
-  'How branding builds strong companies',
-  'Social media strategies for modern brands',
-  'Creative storytelling in marketing',
+  'Tendances du marketing digital en Afrique',
+  'Comment le branding construit des entreprises solides',
+  'Stratégies de réseaux sociaux pour les marques modernes',
+  'Narration créative en marketing',
 ];
 
 const LatestArticles: React.FC = () => {
   return (
     <Section>
-      <Title>Latest Articles</Title>
+      <Title>Articles Récents</Title>
       <ArticlesGrid>
         {articles.map((article, index) => (
           <ArticleItem

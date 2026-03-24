@@ -3,16 +3,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--Background);
   text-align: center;
 `;
 
 const Title = styled.h2`
   font-size: 2.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 2rem;
 `;
 
@@ -26,21 +27,30 @@ const ValuesGrid = styled.div`
 
 const ValueItem = styled(motion.div)`
   padding: 2rem;
-  background: #f5f5f5;
+  background: linear-gradient(135deg, rgba(226, 124, 0, 0.1), rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(226, 124, 0, 0.2);
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(226, 124, 0, 0.2);
+  }
 `;
 
 const ValueTitle = styled.h3`
   font-size: 1.5rem;
-  color: #000;
+  color: var(--white);
 `;
 
-const values = ['Creativity', 'Innovation', 'Collaboration', 'Impact'];
+const values = ['Créativité', 'Innovation', 'Collaboration', 'Impact'];
 
 const OurValues: React.FC = () => {
+  const titlePhrases = ['Nos Valeurs'];
+
   return (
     <Section>
-      <Title>Our Values</Title>
+      <MaskText phrases={titlePhrases} tag="h2" />
       <ValuesGrid>
         {values.map((value, index) => (
           <ValueItem

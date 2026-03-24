@@ -9,9 +9,9 @@ export default function Work() {
     <main>
       <BeforeHeroSection
         backgroundImage="/images/work-hero.jpg"
-        title="OUR CREATIVE WORK"
-        taglineSpan="OUR PORTFOLIO"
-        taglineStrong="CREATIVE PROJECTS"
+        title="NOTRE TRAVAIL CRÉATIF"
+        taglineSpan="NOTRE PORTFOLIO"
+        taglineStrong="PROJETS CRÉATIFS"
       />
       <FeaturedProjects />
       <CaseStudies />

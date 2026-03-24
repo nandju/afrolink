@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimatedLink from '@/components/Common/AnimatedLink';
 import { GetStartedButton } from '@/components';
 import { BurgerMenu, CallToActions, Inner, LogoContainer, Nav, Wrapper } from './styles';
@@ -17,8 +18,10 @@ const Header = () => {
     <Wrapper>
       <Inner>
         <LogoContainer>
-          {/* Image : logo principal Afrolink - remplacer le fichier SVG pour mettre à jour l'identité visuelle */}
-          <Image src={afrolinkLogo} alt="Logo Afrolink" priority />
+          <Link href="/">
+            {/* Image : logo principal Afrolink - remplacer le fichier SVG pour mettre à jour l'identité visuelle */}
+            <Image src={afrolinkLogo} alt="Logo Afrolink" priority />
+          </Link>
           <BurgerMenu onClick={() => setIsOpen(!isOpen)}>
             <motion.div
               variants={menu}
@@ -31,11 +34,11 @@ const Header = () => {
         </LogoContainer>
         <Nav className={isOpen ? 'active' : ''}>
           {links.map((link, index) => (
-            <AnimatedLink key={link.linkTo + index} title={link.linkTo} />
+            <AnimatedLink key={link.linkTo + index} title={link.linkTo} url={link.url} />
           ))}
         </Nav>
         <CallToActions className={isOpen ? 'active' : ''}>
-          <AnimatedLink title="Afrolink" />
+          <AnimatedLink title="Afrolink" url="/afrolink" />
           <GetStartedButton padding="0.5rem 0.75rem" />
         </CallToActions>
       </Inner>

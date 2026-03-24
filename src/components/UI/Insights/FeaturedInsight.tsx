@@ -40,15 +40,15 @@ const ArticleContent = styled.p`
 const FeaturedInsight: React.FC = () => {
   return (
     <Section>
-      <Title>Featured Insight</Title>
+      <Title>Insight Vedette</Title>
       <FeaturedArticle
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <ArticleTitle>Digital Marketing Trends in Africa</ArticleTitle>
+        <ArticleTitle>Tendances du Marketing Digital en Afrique</ArticleTitle>
         <ArticleContent>
-          Explore the latest trends shaping digital marketing across the African continent.
+          Explorez les dernières tendances qui façonnent le marketing digital à travers le continent africain.
         </ArticleContent>
       </FeaturedArticle>
     </Section>

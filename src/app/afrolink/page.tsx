@@ -10,9 +10,9 @@ export default function AfroLink() {
     <main>
       <BeforeHeroSection
         backgroundImage="/images/afrolink-hero.jpg"
-        title="WE ARE AFROLINK"
-        taglineSpan="ABOUT US"
-        taglineStrong="OUR STORY"
+        title="NOUS SOMMES AFROLINK"
+        taglineSpan="À PROPOS"
+        taglineStrong="NOTRE HISTOIRE"
       />
       <OurStory />
       <OurVision />

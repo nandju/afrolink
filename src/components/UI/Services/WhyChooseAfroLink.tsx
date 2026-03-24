@@ -3,16 +3,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--Background);
   text-align: center;
 `;
 
 const Title = styled.h2`
   font-size: 2.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 2rem;
 `;
 
@@ -21,10 +22,15 @@ const Description = styled.p`
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
-  color: #333;
+  color: var(--light-gray);
 `;
 
 const WhyChooseAfroLink: React.FC = () => {
+  const titlePhrases = ['Pourquoi Choisir AfroLink'];
+  const descriptionPhrases = [
+    'Une agence digitale créative basée en Côte d\'Ivoire aidant les marques à se connecter, s\'engager et grandir grâce à une communication impactante.'
+  ];
+
   return (
     <Section>
       <motion.div
@@ -32,10 +38,8 @@ const WhyChooseAfroLink: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Title>Why Choose AfroLink</Title>
-        <Description>
-          A creative digital agency based in Côte d&apos;Ivoire helping brands connect, engage and grow through impactful communication.
-        </Description>
+        <MaskText phrases={titlePhrases} tag="h2" />
+        <MaskText phrases={descriptionPhrases} tag="p" />
       </motion.div>
     </Section>
   );

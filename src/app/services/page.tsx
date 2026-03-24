@@ -9,9 +9,9 @@ export default function Services() {
     <main>
       <BeforeHeroSection
         backgroundImage="/images/services-hero.jpg"
-        title="DIGITAL COMMUNICATION SERVICES"
-        taglineSpan="OUR SERVICES"
-        taglineStrong="DIGITAL EXPERTISE"
+        title="SERVICES DE COMMUNICATION DIGITALE"
+        taglineSpan="NOS SERVICES"
+        taglineStrong="EXPERTISE DIGITALE"
       />
       <OurExpertise />
       <OurProcess />

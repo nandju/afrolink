@@ -3,6 +3,7 @@ import { styled } from 'styled-components';
 
 export const Wrapper = styled.section`
   margin-top: 11.25rem;
+  background: var(--accent-gradient);
 
   @media (max-width: 768px) {
     margint-top: 6.25rem;
@@ -34,11 +35,12 @@ export const Header = styled.header`
   h1 {
     font-size: 4.75rem;
     font-weight: 400;
+    color: var(--white);
   }
 
   p {
     max-width: 41.75rem;
-    color: var(--link-color);
+    color: var(--white);
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -93,9 +95,15 @@ export const Edge = styled.div`
   flex-direction: column;
   gap: 0.62rem;
 
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+
   p {
     max-width: 26rem;
-    color: var(--link-color);
+    color: var(--white);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -110,6 +118,7 @@ export const Title = styled.div`
   h3 {
     font-size: 1.5rem;
     font-weight: 500;
+    color: var(--white);
   }
 `;
 

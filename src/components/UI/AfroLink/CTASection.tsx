@@ -3,20 +3,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
+import { GetStartedButton } from '@/components';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--Background);
   text-align: center;
 `;
 
 const Title = styled.h2`
   font-size: 2.5rem;
-  color: #000;
+  color: var(--white);
   margin-bottom: 2rem;
 `;
 
+const ButtonContainer = styled.div`
+  margin-top: 2rem;
+`;
+
 const CTASection: React.FC = () => {
+  const titlePhrases = ['Créons ensemble quelque chose de remarquable.'];
+
   return (
     <Section>
       <motion.div
@@ -24,7 +32,10 @@ const CTASection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Title>Let’s create something remarkable together.</Title>
+        <MaskText phrases={titlePhrases} tag="h2" />
+        <ButtonContainer>
+          <GetStartedButton padding="1rem 2rem" />
+        </ButtonContainer>
       </motion.div>
     </Section>
   );

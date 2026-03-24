@@ -3,11 +3,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import MaskText from '@/components/Common/MaskText';
 
 const Section = styled.section`
   padding: 5rem 2rem;
-  background: #000;
-  color: #fff;
+  background: var(--Background);
+  color: var(--white);
   text-align: center;
 `;
 
@@ -21,9 +22,15 @@ const Description = styled.p`
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
+  color: var(--light-gray);
 `;
 
 const OurVision: React.FC = () => {
+  const titlePhrases = ['Notre Vision'];
+  const descriptionPhrases = [
+    'Devenir une agence créative leader façonnant l\'avenir de la communication digitale en Afrique.'
+  ];
+
   return (
     <Section>
       <motion.div
@@ -31,10 +38,8 @@ const OurVision: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Title>Our Vision</Title>
-        <Description>
-          To become a leading creative agency shaping the future of digital communication in Africa.
-        </Description>
+        <MaskText phrases={titlePhrases} tag="h2" />
+        <MaskText phrases={descriptionPhrases} tag="p" />
       </motion.div>
     </Section>
   );

@@ -2,12 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --Background: #070606;
+    --Background: #000000;
     --white: #fff;
     --light-gray: #dcdcdc;
     --link-color: #bdbdbd;
-    --green: #2b892e;
-    --emerald: #48d64c;
+    --gradient-start: #e27c00;
+    --gradient-end: #ffa500;
+    --accent-gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   }
 
   * {
