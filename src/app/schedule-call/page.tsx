@@ -14,9 +14,9 @@ export default function ScheduleCall() {
         taglineStrong="PARLONS-EN"
       />
       <ContactForm />
-      <MeetingScheduler />
+      {/* <MeetingScheduler />
       <ContactInfo />
-      <CTASection />
+      <CTASection /> */}
     </main>
   );
 }
