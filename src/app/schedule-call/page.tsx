@@ -3,6 +3,7 @@ import ContactForm from '@/components/UI/ScheduleCall/ContactForm';
 import MeetingScheduler from '@/components/UI/ScheduleCall/MeetingScheduler';
 import ContactInfo from '@/components/UI/ScheduleCall/ContactInfo';
 import CTASection from '@/components/UI/ScheduleCall/CTASection';
+import FloatingActionButton from '@/components/UI/ScheduleCall/FloatingActionButton';
 
 export default function ScheduleCall() {
   return (
@@ -17,6 +18,7 @@ export default function ScheduleCall() {
       {/* <MeetingScheduler />
       <ContactInfo />
       <CTASection /> */}
+      <FloatingActionButton />
     </main>
   );
 }
