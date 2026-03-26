@@ -1,40 +1,30 @@
 export const menu = {
   open: {
-    width: '250px',
-    height: '300px',
-    top: '-25px',
-    right: '-25px',
-    transition: { duration: 0.75, type: 'tween', ease: [0.76, 0, 0.24, 1] },
+    width: '220px',
+    height: '280px',
+    top: '-10px',
+    right: '-10px',
+    borderRadius: '16px',
+    transition: { duration: 0.6, type: 'tween', ease: [0.76, 0, 0.24, 1] },
   },
-
   closed: {
-    width: '55px',
-    height: '40px',
+    width: '44px',
+    height: '44px',
     top: '0px',
-    right: '-4px',
+    right: '0px',
+    borderRadius: '12px',
     transition: {
-      duration: 0.75,
-      delay: 0.35,
+      duration: 0.6,
+      delay: 0.3,
       type: 'tween',
       ease: [0.76, 0, 0.24, 1],
     },
   },
 };
+
 export const links = [
-  {
-    url: '/',
-    linkTo: 'Accueil',
-  },
-  {
-    url: '/services',
-    linkTo: 'Services',
-  },
-  {
-    url: '/work',
-    linkTo: 'Notre travail',
-  },
-  {
-    url: '/insights',
-    linkTo: "Actualités",
-  },
+  { url: '/', linkTo: 'Accueil' },
+  { url: '/services', linkTo: 'Services' },
+  { url: '/work', linkTo: 'Notre travail' },
+  { url: '/insights', linkTo: 'Actualités' },
 ];
